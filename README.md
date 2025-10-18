@@ -56,15 +56,15 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 
 **Lambda Tasks:**
 
-  - 1. Read JSON from S3
+  1. Read JSON from S3
 
-  - 2. Flatten nested data
+  2. Flatten nested data
 
-  - 3. Convert DataFrame to Parquet
+  3. Convert DataFrame to Parquet
 
-  - 4. Save result to /parquet/ with timestamp
+  4. Save result to /parquet/ with timestamp
 
-  - 5. Trigger Glue Crawler automatically
+  5. Trigger Glue Crawler automatically
 
 | Lambda function code window |
 | ----------- |
@@ -76,3 +76,52 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 
 ## AWS Glue Crawler
 
+**Steps:**
+  1. Create a new Glue crawler with source → parquet/.
+
+  2. Assign an IAM role with access to S3.
+
+  3. Verify schema after the first run (column names, data types).
+
+  4. Automate crawler execution after new data upload.
+
+| Glue Crawler configuration |
+| ----------- |
+| <img width="2208" height="1018" alt="Glue Crawler configuration" src="https://github.com/user-attachments/assets/7f671548-40c3-4d2e-be2c-b6163feafe19" /> |
+
+| Glue Table Schema – Columns & Data Types |
+| ----------- |
+| <img width="2223" height="1134" alt="Glue Table Schema – Columns   Data Types" src="https://github.com/user-attachments/assets/5da86f29-ea9b-496e-885c-e3b4c8d1262e" /> |
+
+| Glue Crawler Run – Success log |
+| ----------- |
+| <img width="2244" height="709" alt="Glue Crawler Run – Success log" src="https://github.com/user-attachments/assets/2717552e-3c77-4737-b7a3-b830f955fffa" /> |
+
+## AWS Amazon Athena
+**Steps:**
+
+1. Create a database.
+
+2. Use the table created by Glue.
+
+3. Run SQL queries to analyze the Parquet data.
+
+| Athena console query + results |
+| ----------- |
+| <img width="2244" height="709" alt="Glue Crawler Run – Success log" src="https://github.com/user-attachments/assets/2717552e-3c77-4737-b7a3-b830f955fffa" /> |
+
+## Automation & Monitoring
+
+**Monitoring:**
+
+- CloudWatch Logs for Lambda execution and Glue runs.
+
+- Validate successful triggers and Parquet generation.
+
+| CloudWatch Logs showing Lambda success |
+| ----------- |
+| <img width="2217" height="528" alt="CloudWatch Logs showing Lambda success" src="https://github.com/user-attachments/assets/a6eb04c0-7b64-49e6-8bb6-a62b27ea43df" /> |
+
+| Automatic Сrawler Execution |
+| ----------- |
+| <img width="2512" height="741" alt="Automatic Сrawler Execution" src="https://github.com/user-attachments/assets/66c44780-bd3a-40e1-9d0e-b41f6074de39" /> |
