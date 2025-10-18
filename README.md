@@ -95,7 +95,7 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 
 | Glue Crawler Run – Success log |
 | ----------- |
-| <img width="2244" height="709" alt="Glue Crawler Run – Success log" src="https://github.com/user-attachments/assets/2717552e-3c77-4737-b7a3-b830f955fffa" /> |
+| <img width="2264" height="703" alt="Glue Crawler Run – Success log" src="https://github.com/user-attachments/assets/23b08765-1831-49db-9001-7327ddd3ba9b" /> |
 
 ## AWS Amazon Athena
 **Steps:**
@@ -108,7 +108,7 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 
 | Athena console query + results |
 | ----------- |
-| <img width="2244" height="709" alt="Glue Crawler Run – Success log" src="https://github.com/user-attachments/assets/2717552e-3c77-4737-b7a3-b830f955fffa" /> |
+| <img width="2146" height="1127" alt="Athena console query + results" src="https://github.com/user-attachments/assets/071d1af7-1311-4572-8952-652306ab2ad2" /> |
 
 ## Automation & Monitoring
 
