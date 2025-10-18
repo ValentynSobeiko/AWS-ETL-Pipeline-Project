@@ -5,16 +5,14 @@ It ingests raw JSON order data, transforms it into optimized Parquet format, and
 
 The goal is to simulate a real-world data processing workflow for analytics and reporting while following AWS best practices.
 
----
 
-## Architecture
+# Architecture
 | ----------- |
 |  |
 
 
 
-
-## AWS Setup
+# AWS Setup
 Create an AWS account and log into the Management Console.
 
 **Create S3 buckets and folders:**
@@ -37,7 +35,7 @@ Create an AWS account and log into the Management Console.
 | ----------- |
 | <img width="2064" height="497" alt="IAM role policy configuration" src="https://github.com/user-attachments/assets/0f7a91ce-805c-4890-8cab-7fea20ae9946" /> |
 
-## Data Preparation
+# Data Preparation
 
 | Raw JSON |
 | ----------- |
@@ -49,7 +47,7 @@ Create an AWS account and log into the Management Console.
 | <img width="1540" height="1250" alt="2  Flatten Data" src="https://github.com/user-attachments/assets/8b423042-2514-46ed-ad19-e77cb2b6a49d" />|
 
 
-## AWS Lambda — ETL Automation
+# AWS Lambda — ETL Automation
 
 Function: ETL_pipeline
 Trigger: S3 incoming/ (event: ObjectCreated)
@@ -74,7 +72,7 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 | ----------- |
 | <img width="2085" height="811" alt="S3 event trigger configuration" src="https://github.com/user-attachments/assets/337248bb-3f6e-4a3b-a5ec-0ec2c23758cf" /> |
 
-## AWS Glue Crawler
+# AWS Glue Crawler
 
 **Steps:**
   1. Create a new Glue crawler with source → parquet/.
@@ -97,7 +95,7 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 | ----------- |
 | <img width="2264" height="703" alt="Glue Crawler Run – Success log" src="https://github.com/user-attachments/assets/23b08765-1831-49db-9001-7327ddd3ba9b" /> |
 
-## AWS Amazon Athena
+# AWS Amazon Athena
 **Steps:**
 
 1. Create a database.
@@ -110,7 +108,7 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 | ----------- |
 | <img width="2146" height="1127" alt="Athena console query + results" src="https://github.com/user-attachments/assets/071d1af7-1311-4572-8952-652306ab2ad2" /> |
 
-## Automation & Monitoring
+# Automation & Monitoring
 
 **Monitoring:**
 
@@ -125,3 +123,67 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 | Automatic Сrawler Execution |
 | ----------- |
 | <img width="2512" height="741" alt="Automatic Сrawler Execution" src="https://github.com/user-attachments/assets/66c44780-bd3a-40e1-9d0e-b41f6074de39" /> |
+
+
+# Conclusion and Results
+
+## Project Summary
+
+This AWS ETL project demonstrates a fully automated order processing pipeline:
+
+Upload JSON → Lambda ETL → Parquet → Glue Data Catalog → Athena queries
+
+Serverless architecture: no manual intervention required after setup
+End-to-end automation: Lambda triggers on file upload, Glue Crawler updates schema, Athena queries ready immediately
+
+## Key Achievements
+
+**Data Automation**
+
+- Processed 100+ JSON orders in a single batch automatically
+
+- Converted data into Parquet format, reducing storage size by ~30%
+
+- Schema maintained automatically in Glue, no manual updates required
+
+- Queries run instantly in Athena once Parquet files are uploaded
+- 
+## Skills Demonstrated
+
+- AWS Lambda, S3, Glue, Athena
+
+- Python + Pandas for data transformation
+
+- Serverless ETL design and automation
+
+- Cloud monitoring via CloudWatch
+
+## Results / Insights
+
+- Total sales per customer calculated in under 2 seconds per 1000 orders
+
+- Top-selling products identified for inventory planning
+
+- Daily revenue trends available instantly for analytics
+
+- Pipeline efficiency:
+  -  Average Lambda execution time: ~5 seconds per JSON file
+  -  Automatic Glue Crawler update within 30 seconds of Parquet upload
+  -  Athena queries return results <1 second for 1000+ rows
+
+## Query examples:
+
+| Total sales by customer |
+| ----------- |
+| <img width="2111" height="1153" alt="Query 1 Total sales by customer" src="https://github.com/user-attachments/assets/b48bf4df-6f02-45eb-854a-46d447353244" />|
+
+
+| Top-selling products |
+| ----------- |
+| <img width="2146" height="1014" alt="Query 2 Top-selling products" src="https://github.com/user-attachments/assets/871705dc-2c1d-4b45-b796-216606641ead" /> |
+
+
+| Daily revenue trends |
+| ----------- |
+| <img width="2118" height="1152" alt="Query 3 Daily revenue trends" src="https://github.com/user-attachments/assets/49ada089-96ad-4f10-aa7a-0ee3a52e6dde" />|
+- Ready for business analytics, reporting, or BI dashboards
