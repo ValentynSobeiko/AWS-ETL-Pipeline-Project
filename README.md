@@ -11,7 +11,6 @@ The goal is to simulate a real-world data processing workflow for analytics and 
 |  |
 
 
-
 # AWS Setup
 Create an AWS account and log into the Management Console.
 
@@ -108,7 +107,7 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 | ----------- |
 | <img width="2146" height="1127" alt="Athena console query + results" src="https://github.com/user-attachments/assets/071d1af7-1311-4572-8952-652306ab2ad2" /> |
 
-## Query examples:
+## Query examples
 
 | Total sales by customer |
 | ----------- |
