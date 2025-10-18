@@ -108,6 +108,22 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 | ----------- |
 | <img width="2146" height="1127" alt="Athena console query + results" src="https://github.com/user-attachments/assets/071d1af7-1311-4572-8952-652306ab2ad2" /> |
 
+## Query examples:
+
+| Total sales by customer |
+| ----------- |
+| <img width="2111" height="1153" alt="Query 1 Total sales by customer" src="https://github.com/user-attachments/assets/b48bf4df-6f02-45eb-854a-46d447353244" />|
+
+
+| Top-selling products |
+| ----------- |
+| <img width="2146" height="1014" alt="Query 2 Top-selling products" src="https://github.com/user-attachments/assets/871705dc-2c1d-4b45-b796-216606641ead" /> |
+
+
+| Daily revenue trends |
+| ----------- |
+| <img width="2118" height="1152" alt="Query 3 Daily revenue trends" src="https://github.com/user-attachments/assets/49ada089-96ad-4f10-aa7a-0ee3a52e6dde" />|
+
 # Automation & Monitoring
 
 **Monitoring:**
@@ -147,7 +163,7 @@ End-to-end automation: Lambda triggers on file upload, Glue Crawler updates sche
 - Schema maintained automatically in Glue, no manual updates required
 
 - Queries run instantly in Athena once Parquet files are uploaded
-- 
+  
 ## Skills Demonstrated
 
 - AWS Lambda, S3, Glue, Athena
@@ -171,19 +187,3 @@ End-to-end automation: Lambda triggers on file upload, Glue Crawler updates sche
   -  Automatic Glue Crawler update within 30 seconds of Parquet upload
   -  Athena queries return results <1 second for 1000+ rows
 
-## Query examples:
-
-| Total sales by customer |
-| ----------- |
-| <img width="2111" height="1153" alt="Query 1 Total sales by customer" src="https://github.com/user-attachments/assets/b48bf4df-6f02-45eb-854a-46d447353244" />|
-
-
-| Top-selling products |
-| ----------- |
-| <img width="2146" height="1014" alt="Query 2 Top-selling products" src="https://github.com/user-attachments/assets/871705dc-2c1d-4b45-b796-216606641ead" /> |
-
-
-| Daily revenue trends |
-| ----------- |
-| <img width="2118" height="1152" alt="Query 3 Daily revenue trends" src="https://github.com/user-attachments/assets/49ada089-96ad-4f10-aa7a-0ee3a52e6dde" />|
-- Ready for business analytics, reporting, or BI dashboards
