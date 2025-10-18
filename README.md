@@ -47,3 +47,32 @@ Create an AWS account and log into the Management Console.
 | Read and Flatten JSON in Pandas|
 | ----------- |
 | <img width="1540" height="1250" alt="2  Flatten Data" src="https://github.com/user-attachments/assets/8b423042-2514-46ed-ad19-e77cb2b6a49d" />|
+
+
+## AWS Lambda — ETL Automation
+
+Function: ETL_pipeline
+Trigger: S3 incoming/ (event: ObjectCreated)
+
+**Lambda Tasks:**
+
+  1.Read JSON from S3
+
+  2.Flatten nested data
+
+  3.Convert DataFrame to Parquet
+
+  4.Save result to /parquet/ with timestamp
+
+  5.Trigger Glue Crawler automatically
+
+| Lambda function code window |
+| ----------- |
+| <img width="1423" height="1247" alt="Lambda function code window" src="https://github.com/user-attachments/assets/e026aee2-e542-4145-9d95-cded96dd6c49" /> |
+  
+| S3 event trigger configuration |
+| ----------- |
+| <img width="2085" height="811" alt="S3 event trigger configuration" src="https://github.com/user-attachments/assets/337248bb-3f6e-4a3b-a5ec-0ec2c23758cf" /> |
+
+## AWS Glue Crawler
+
