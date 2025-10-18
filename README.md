@@ -30,7 +30,7 @@ Create an AWS account and log into the Management Console.
 **Verify Python and Jupyter Notebook locally for testing.**
 
 **| S3 folders structure |**
-| <img width="1711" height="322" alt="S3 folders structure" src="https://github.com/user-attachments/assets/ed7b9a69-f27b-4ee5-8174-e99d9e290761" /> |
+|<img width="1711" height="322" alt="S3 folders structure" src="https://github.com/user-attachments/assets/ed7b9a69-f27b-4ee5-8174-e99d9e290761" />|
 
 **| IAM role policy configuration |**
 | <img width="2064" height="497" alt="IAM role policy configuration" src="https://github.com/user-attachments/assets/0f7a91ce-805c-4890-8cab-7fea20ae9946" /> |
