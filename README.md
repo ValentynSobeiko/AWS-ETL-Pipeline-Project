@@ -8,7 +8,7 @@ The goal is to simulate a real-world data processing workflow for analytics and 
 
 # Architecture
 | ----------- |
-|  |
+| <img width="7960" height="2170" alt="AWS Serverless ETL Pipeline drawio" src="https://github.com/user-attachments/assets/e9307cd5-17b1-46ed-940a-5a7ba4037e5f" /> |
 
 
 # AWS Setup
