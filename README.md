@@ -56,15 +56,15 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 
 **Lambda Tasks:**
 
-  1.Read JSON from S3
+  - 1. Read JSON from S3
 
-  2.Flatten nested data
+  - 2. Flatten nested data
 
-  3.Convert DataFrame to Parquet
+  - 3. Convert DataFrame to Parquet
 
-  4.Save result to /parquet/ with timestamp
+  - 4. Save result to /parquet/ with timestamp
 
-  5.Trigger Glue Crawler automatically
+  - 5. Trigger Glue Crawler automatically
 
 | Lambda function code window |
 | ----------- |
