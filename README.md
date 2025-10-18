@@ -120,7 +120,7 @@ Trigger: S3 incoming/ (event: ObjectCreated)
 
 | CloudWatch Logs showing Lambda success |
 | ----------- |
-| <img width="2547" height="437" alt="CloudWatch Logs showing Lambda success" src="https://github.com/user-attachments/assets/70dc89ff-b065-4970-9ae2-273781290124" /> |
+| <img width="2531" height="433" alt="CloudWatch Logs showing Lambda success" src="https://github.com/user-attachments/assets/5240465f-8af7-434e-9f5a-c4d8e47bc708" /> |
 
 | Automatic Сrawler Execution |
 | ----------- |
